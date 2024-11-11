@@ -296,13 +296,15 @@
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Products</h4>
-                            <a href="https://www.acer.com/id-id/laptops"><i class="fas fa-angle-right me-2"></i> Laptops</a>
-                            <a href="https://www.acer.com/id-id/desktops-and-all-in-ones/aspire-all-in-ones"><i class="fas fa-angle-right me-2"></i> All in One</a>
-                            <a href="https://www.acer.com/id-id/monitors"><i class="fas fa-angle-right me-2"></i> Monitor</a>
-                            <a href="https://www.acer.com/id-id/chromebooks"><i class="fas fa-angle-right me-2"></i> Chromebook</a>
-                            <a href="https://www.acer.com/id-id/projectors"><i class="fas fa-angle-right me-2"></i> Projector</a>
-                            <a href="https://www.acer.com/id-id/accessories"><i class="fas fa-angle-right me-2"></i> Peripherals</a>
+                            <h4 class="mb-4 text-white"> Pertemuan 1-7</h4>
+                            <a href="{{url('linktree')}}"><i class="fas fa-angle-right me-2"></i> Pertemuan 1</a>
+                            <a href="{{url('hello')}}"><i class="fas fa-angle-right me-2"></i> Pertemuan 2 Part 1</a>
+                            <a href="{{url('style')}}"><i class="fas fa-angle-right me-2"></i> Pertemuan 2 Part 2</a>
+                            <a href="{{url('style2')}}"><i class="fas fa-angle-right me-2"></i> Pertemuan 2 Part 3</a>
+                            <a href="{{url('responsive1')}}"><i class="fas fa-angle-right me-2"></i> Pertemuan 3</a>
+                            <a href="{{url('5026221199')}}"><i class="fas fa-angle-right me-2"></i> Pertemuan 5</a>
+                            <a href="{{url('form')}}"><i class="fas fa-angle-right me-2"></i> Pertemuan 7 form</a>
+                            <a href="{{url('template')}}"><i class="fas fa-angle-right me-2"></i> Pertemuan 7 form template</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">

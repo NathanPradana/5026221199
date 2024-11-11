@@ -61,6 +61,11 @@ Route::get('/template', function () {
     return view('template');
 });
 
+Route::get('/5026221199', function () {
+    return view('5026221199');
+});
+
+
 
 Route::get('/error', function () {
     return "<h1>Server Error : Ada Kesalahan di Server</h1>";

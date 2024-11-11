@@ -4,7 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Client Testimonials</title>
-    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px;
+            text-align: center;
+            flex: 1;
+        }
+        h1 {
+            margin-bottom: 200px;
+            font-size: 50px;
+            color: #333;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .testimonial {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 0px;
+            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+        .testimonial img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        .testimonial-content {
+            text-align: left;
+        }
+        .testimonial-content p {
+            font-style: italic;
+            font-size: 20px;
+            margin: 0 0 20px;
+        }
+        .testimonial-content h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .testimonial-content span {
+            color: #777;
+            font-size: 14px;
+        }
+        .logos {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #d3d3d3;
+            padding: 20px 0;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        .logos img {
+            max-width: 100px;
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
 
