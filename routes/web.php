@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -66,11 +67,21 @@ Route::get('/5026221199', function () {
 });
 
 
-
 Route::get('/error', function () {
     return "<h1>Server Error : Ada Kesalahan di Server</h1>";
 });
 
+//route CRUD
+Route::get('pegawai', 'App\Http\Controllers\PegawaiControllerDB@index');
 
+Route::get('/pegawai/tambah','App\Http\Controllers\PegawaiControllerDB@tambah');
 
+Route::get('/pegawai/edit/{id}','App\Http\Controllers\PegawaiControllerDB@edit');
 
+Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiControllerDB@hapus');
+
+Route::post('/pegawai/store','App\Http\Controllers\PegawaiControllerDB@store');
+
+Route::post('/pegawai/update','App\Http\Controllers\PegawaiControllerDB@update');
+
+Route::get('/pegawai/cari','App\Http\Controllers\PegawaiControllerDB@cari');
