@@ -1,18 +1,18 @@
 @extends('template1')
 
-@section('tulisan1', 'Data pegawai')
+@section('tulisan1', 'Data Unggas')
 
 @section('link1')
-	<a href="/pegawai/tambah" class="btn btn-primary"> + Tambah Pegawai Baru</a>
+	<a href="/unggas/tambah" class="btn btn-primary"> + Tambah Unggas Baru</a>
 @endsection
 
 @section('konten')
 
-	<form action="/pegawai/cari" method="GET">
+	<form action="/unggas/cari" method="GET">
         <div class="row mb-3">
-            <label for="cari" class="col-sm-2 col-form-label">Cari nama Pegawai :</label>
+            <label for="cari" class="col-sm-2 col-form-label">Cari nama Unggas :</label>
             <div class="col-sm-6">
-              <input type="text" name="cari" class="form-control" id="cari" placeholder="Cari Pegawai ..." value="{{ old('cari') }}">
+              <input type="text" name="cari" class="form-control" id="cari" placeholder="Cari unggas ..." value="{{ old('cari') }}">
             </div>
             <div class="col-sm-4">
                 <input type="submit" value="CARI" class="btn btn-success ">
@@ -28,33 +28,31 @@
 	<table class="table table-striped table-hover">
 		<tr>
 			<th>Nama</th>
-			<th>Jabatan</th>
-			<th>Umur</th>
-			<th>Alamat</th>
-			<th>Opsi</th>
+			<th>Jumlah</th>
+			<th>Tersedia</th>
+            <th>Edit/Hapus</th>
 		</tr>
-		@foreach($pegawai as $p)
+		@foreach($unggas as $p)
 		<tr>
-			<td>{{ $p->pegawai_nama }}</td>
-			<td>{{ $p->pegawai_jabatan }}</td>
-			<td>{{ $p->pegawai_umur }}</td>
-			<td>{{ $p->pegawai_alamat }}</td>
+			<td>{{ $p->unggas_nama }}</td>
+			<td>{{ $p->unggas_jumlah }}</td>
+			<td>{{ $p->unggas_tersedia }}</td>
 			<td>
-				<a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn btn-info"><i class="fa-solid fa-pen-to-square"></i></a>
+				<a href="/unggas/edit/{{ $p->unggas_id }}" class="btn btn-info"><i class="fa-solid fa-pen-to-square"></i></a>
 				|
-				<a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+				<a href="/unggas/hapus/{{ $p->unggas_id }}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
 			</td>
 		</tr>
 		@endforeach
 	</table>
 
     <br/>
-	Halaman : {{ $pegawai->currentPage() }} <br/>
-	Jumlah Data : {{ $pegawai->total() }} <br/>
-	Data Per Halaman : {{ $pegawai->perPage() }} <br/>
+	Halaman : {{ $unggas->currentPage() }} <br/>
+	Jumlah Data : {{ $unggas->total() }} <br/>
+	Data Per Halaman : {{ $unggas->perPage() }} <br/>
 
 
-	{{ $pegawai->links() }}
+	{{ $unggas->links() }}
 
 
 @endsection

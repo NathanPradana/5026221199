@@ -1,43 +1,46 @@
 @extends('template1')
 
-@section('tulisan1', 'Edit pegawai')
+@section('tulisan1', 'Edit Unggas')
 
 @section('link1')
-	<a href="/pegawai"> Kembali</a></a>
+	<a href="/unggas"> Kembali</a></a>
 @endsection
 
 @section('konten')
-	@foreach($pegawai as $p)
-	<form action="/pegawai/update" method="post">
+	@foreach($unggas as $p)
+	<form action="/unggas/update" method="post">
 		{{ csrf_field() }}
-		<input type="hidden" name="id" value="{{ $p->pegawai_id }}"> <br/>
+		<input type="hidden" name="id" value="{{ $p->unggas_id }}"> <br/>
         <div class="row mb-3">
             <label for="nama" class="col-sm-2 col-form-label">Nama</label>
             <div class="col-sm-10">
-              <input type="text" name="nama" class="form-control" id="nama" required="required" value="{{ $p->pegawai_nama }}">
+              <input type="text" name="nama" class="form-control" id="nama" required="required" value="{{ $p->unggas_nama }}">
             </div>
           </div>
 
           <div class="row mb-3">
-            <label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>
+            <label for="jumlah" class="col-sm-2 col-form-label">Jumlah</label>
             <div class="col-sm-10">
-              <input type="text" name="jabatan" class="form-control" id="jabatan" required="required" value="{{ $p->pegawai_jabatan }}">
+              <input type="number" name="jumlah" class="form-control" id="jumlah" required="required" value="{{ $p->unggas_jumlah }}">
             </div>
           </div>
 
           <div class="row mb-3">
-            <label for="umur" class="col-sm-2 col-form-label">Umur</label>
+            <label for="tersedia" class="col-sm-2 col-form-label">Tersedia</label>
             <div class="col-sm-10">
-              <input type="number" name="umur" class="form-control" id="umur" required="required" value="{{ $p->pegawai_umur }}">
+              <!-- Pilihan "Ada" -->
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="tersedia" id="ada" value="1" required>
+                <label class="form-check-label" for="ada">Ada</label>
+              </div>
+              <!-- Pilihan "Habis" -->
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="tersedia" id="habis" value="0" required>
+                <label class="form-check-label" for="habis">Habis</label>
+              </div>
             </div>
           </div>
 
-          <div class="row mb-3">
-            <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
-            <div class="col-sm-10">
-              <textarea name="alamat" class="form-control" id="alamat" required="required"name="alamat">{{ $p->pegawai_alamat }}</textarea>
-            </div>
-          </div>
 
           <div class="row mb-3">
             <div class="col-sm-12">

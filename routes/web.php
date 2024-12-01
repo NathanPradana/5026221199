@@ -72,16 +72,16 @@ Route::get('/error', function () {
 });
 
 //route CRUD
-Route::get('pegawai', 'App\Http\Controllers\PegawaiControllerDB@index');
+Route::get('unggas', 'App\Http\Controllers\unggasControllerDB@index');
 
-Route::get('/pegawai/tambah','App\Http\Controllers\PegawaiControllerDB@tambah');
+Route::get('/unggas/tambah','App\Http\Controllers\unggasControllerDB@tambah');
 
-Route::get('/pegawai/edit/{id}','App\Http\Controllers\PegawaiControllerDB@edit');
+Route::get('/unggas/edit/{id}','App\Http\Controllers\unggasControllerDB@edit');
 
-Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiControllerDB@hapus');
+Route::get('/unggas/hapus/{id}','App\Http\Controllers\unggasControllerDB@hapus');
 
-Route::post('/pegawai/store','App\Http\Controllers\PegawaiControllerDB@store');
+Route::post('/unggas/store','App\Http\Controllers\unggasControllerDB@store');
 
-Route::post('/pegawai/update','App\Http\Controllers\PegawaiControllerDB@update');
+Route::post('/unggas/update','App\Http\Controllers\unggasControllerDB@update');
 
-Route::get('/pegawai/cari','App\Http\Controllers\PegawaiControllerDB@cari');
+Route::get('/unggas/cari','App\Http\Controllers\unggasControllerDB@cari');
