@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class PegawaiControllerDB extends Controller
 {
+
     public function indexpegawai()
     {
     	// mengambil data dari table pegawai

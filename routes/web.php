@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+   // return view('welcome');
+//});
 
 Route::get('/contact', function () {
     return view('contact');
@@ -99,3 +99,5 @@ Route::post('/pegawai/store','App\Http\Controllers\PegawaiControllerDB@storepega
 Route::post('/pegawai/update','App\Http\Controllers\PegawaiControllerDB@updatepegawai');
 
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiControllerDB@caripegawai');
+
+Route::get('/','App\Http\Controllers\counterController@index2');

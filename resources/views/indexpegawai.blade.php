@@ -1,6 +1,6 @@
 @extends('template1pegawai')
 
-@section('tulisan1', 'Data pegawai')
+@section('tulisan1', 'Data Pegawai')
 
 @section('link1')
 	<a href="/pegawai/tambah" class="btn btn-primary"> + Tambah Pegawai Baru</a>
