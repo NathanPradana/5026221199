@@ -85,3 +85,17 @@ Route::post('/unggas/store','App\Http\Controllers\unggasControllerDB@store');
 Route::post('/unggas/update','App\Http\Controllers\unggasControllerDB@update');
 
 Route::get('/unggas/cari','App\Http\Controllers\unggasControllerDB@cari');
+
+Route::get('pegawai', 'App\Http\Controllers\PegawaiControllerDB@indexpegawai');
+
+Route::get('/pegawai/tambah','App\Http\Controllers\PegawaiControllerDB@tambahpegawai');
+
+Route::get('/pegawai/edit/{id}','App\Http\Controllers\PegawaiControllerDB@editpegawai');
+
+Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiControllerDB@hapuspegawai');
+
+Route::post('/pegawai/store','App\Http\Controllers\PegawaiControllerDB@storepegawai');
+
+Route::post('/pegawai/update','App\Http\Controllers\PegawaiControllerDB@updatepegawai');
+
+Route::get('/pegawai/cari','App\Http\Controllers\PegawaiControllerDB@caripegawai');

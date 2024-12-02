@@ -10,6 +10,7 @@
   <script src="/js/solid.js"></script>
 </head>
 <body>
+
     <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
