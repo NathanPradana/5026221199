@@ -101,3 +101,15 @@ Route::post('/pegawai/update','App\Http\Controllers\PegawaiControllerDB@updatepe
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiControllerDB@caripegawai');
 
 Route::get('/','App\Http\Controllers\counterController@index2');
+
+//Karyawan
+
+Route::get('karyawan', 'App\Http\Controllers\KaryawanController@indexkaryawan');
+
+Route::get('/karyawan/edit/{id}','App\Http\Controllers\KaryawanController@editkaryawan');
+
+Route::post('/karyawan/update','App\Http\Controllers\KaryawanController@updatekaryawan');
+
+Route::get('/karyawan/cari','App\Http\Controllers\KaryawanController@carikaryawan');
+
+Route::get('/karyawan/view/{id}', 'App\Http\Controllers\KaryawanController@viewkaryawan');

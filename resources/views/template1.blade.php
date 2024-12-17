@@ -26,7 +26,7 @@
             <a class="nav-link" href="/unggas">Unggas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/eas">EAS</a>
+            <a class="nav-link" href="/karyawan">EAS</a>
           </li>
         </ul>
       </div>
